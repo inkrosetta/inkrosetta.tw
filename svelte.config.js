@@ -1,5 +1,5 @@
-import adapter from '@sveltejs/adapter-auto';
-import preprocess from 'svelte-preprocess';
+import adapter from '@sveltejs/adapter-static'
+import preprocess from 'svelte-preprocess'
 import importAssets from 'svelte-preprocess-import-assets'
 import {vanillaExtractPlugin} from '@vanilla-extract/vite-plugin'
 
@@ -10,7 +10,11 @@ const config = {
 	preprocess: [preprocess(), importAssets()],
 
 	kit: {
-		adapter: adapter(),
+    adapter: adapter({
+      pages: 'build',
+      assets: 'build',
+      fallback: null,
+    }),
 
 		prerender: {
 			default: true,
@@ -29,7 +33,7 @@ const config = {
 						noExternal: ['@vanilla-extract/css', '@vanilla-extract/sprinkles', '@vanilla-extract/css/fileScope'],
 					},
 		},
-	}
-};
+	},
+}
 
-export default config;
+export default config
