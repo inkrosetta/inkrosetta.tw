@@ -1,6 +1,7 @@
 <script lang="ts">
   import Block from '$lib/components/Block/Block.svelte'
   import BlockTitle from '$lib/components/BlockTitle/BlockTitle.svelte'
+  import {crewmates} from './crewmates'
 </script>
 
 <Block>
@@ -9,14 +10,19 @@
   </BlockTitle>
 
   <ul>
-    <li>@ddqq7</li>
-    <li>@DAGINGINGIN</li>
-    <li>@twalerts_admin</li>
-    <li>@b20122101</li>
-    <li>@hanstzou</li>
-    <li>@hcyuser</li>
-    <li>@wmcc43</li>
-    <li>@nelsliu</li>
+    {#each crewmates as crew}
+      <li>
+        {#if crew.link}
+          <a href={crew.link}>
+            {crew.displayName}
+          </a>
+        {:else}
+          <span>
+            {crew.displayName}
+          </span>
+        {/if}
+      </li>
+      {/each}
   </ul>
 
 </Block>
