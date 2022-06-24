@@ -6,7 +6,7 @@
 
 <Block className={block}>
   <BlockTitle>
-    我們要建立一個易用、易讀的資訊圖卡系統
+    我們要建立一個易讀易懂的資訊圖卡系統
   </BlockTitle>
 
   <p>
