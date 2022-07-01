@@ -32,6 +32,7 @@ globalStyle(
     width: '100vw',
     overflowX: 'hidden',
     scrollSnapType: 'y mandatory',
+    scrollSnapAlign: 'center',
   },
 )
 
