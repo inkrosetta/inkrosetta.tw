@@ -23,7 +23,7 @@
 		"@vanilla-extract/vite-plugin": "^3.2.1",
 		"eslint": "^8.16.0",
 		"eslint-plugin-svelte3": "^4.0.0",
-		"svelte": "^3.44.0",
+		"svelte": "^3.49.0",
 		"svelte-check": "^2.7.1",
 		"svelte-preprocess": "^4.10.6",
 		"svelte-preprocess-import-assets": "^0.1.6",
